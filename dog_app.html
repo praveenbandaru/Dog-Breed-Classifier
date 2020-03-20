@@ -14603,7 +14603,7 @@ Test Accuracy: 16% (136/836)
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> 
-We used a pretrained ResNet50 model from Torchvision Model Zoo for our Dog Classification problem. This pretrained model was trained on ImageNet dataset and has the last Fully Connected layer with 1000 out features. These pre-trained networks demonstrate a strong ability to generalize to images outside the ImageNet dataset via transfer learning. We make modifications in the pre-existing model by fine-tuning the model. We have frozen the parameters, so we don't back-propogate through them and replaced the last Fully Connected layer with a Linear layer having 133 out features equal to the number of classes in our Dog dataset. Since we assume that the pre-trained network has been trained quite well, I think this architecture is suitable for our current problem after fine-tuning the model.</p>
+We used a pretrained ResNet50 model from Torchvision Model Zoo for our Dog Classification problem. This pretrained model was trained on ImageNet dataset and has the last Fully Connected layer with 1000 out features. These pre-trained networks demonstrate a strong ability to generalize to images outside the ImageNet dataset via transfer learning. We make modifications in the pre-existing model by fine-tuning the model. We have frozen the parameters, so we don't back-propagate through them and replaced the last Fully Connected layer with a Linear layer having 133 out features equal to the number of classes in our Dog dataset. Since we assume that the pre-trained network has been trained quite well, I think this architecture is suitable for our current problem after fine-tuning the model.</p>
 
 </div>
 </div>
@@ -14885,7 +14885,13 @@ Test Accuracy: 85% (712/836)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> (Three possible points for improvement)</p>
+<p><strong>Answer:</strong> While the final model is significant enough to have adequately solved the problem, there is always some room for improvements. We can try the following techniques to improve the test accuracy for our final model:</p>
+<ul>
+<li>Perform histogram equalization to augment the dataset</li>
+<li>Try a different Optimizer like SGD and lower the learning rate.</li>
+<li>Use dropouts to prevent overfitting</li>
+<li>Use more layers like Resnet101 or Resnet152</li>
+</ul>
 
 </div>
 </div>
